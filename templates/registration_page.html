@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container12 row">
+    {% include 'message.html' %}
+        <p class="p"> Register to SharmaServer </p>
+        <form action="{% url 'registration_page' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class=" justify-content-center ">
+                <div class="row col-lg-12">
+                    <div class="form-group  col-lg-6">
+                        <label> First Name<span class="required span">*</span></label>
+                        <input type="text" class="form-control" name="first_name" placeholder="First name">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label>last name</label>
+                        <input type="text" class="form-control" name="last_name" placeholder="Last Name">
+                    </div>
+                </div>
+
+                <div class="row col-12">
+                    <div class="form-group col-lg-6">
+                        <label> Username<span class="span required">*</span></label>
+                        <input type="text" class="form-control" id="uname" name="username" required placeholder="uname">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label>Email<span class="span required">*</span></label>
+                        <input type="email" class="form-control" id="email" name="email" required placeholder="Email">
+                    </div>
+                </div>
+
+                <div class="row col-12">
+                    <div class="form-group col-lg-6">
+                        <label>Password<span class="span required">*</span></label>
+                        <input type="password" class="form-control"id="password"  name="password" required placeholder=" Password">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label>Confirm Password<span class="span required">*</span></label>
+                        <input type="text" class="form-control" id="cpassword" required placeholder="Password">
+                    </div>
+                </div>
+
+
+                <div class="row col-12">
+                    <div class="form-group col-lg-6">
+                        <label>Profile pic</label>
+                        <input type="file" accept=".jpg " class="form-control p-0" id="profile_pic" name="profile_pic"
+                            placeholder="select profile pic">
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <label>Mobile No<span class="span required">*</span></label>
+                        <input type="text" class="form-control" id="mobile_no" required name="mobile_no"
+                            placeholder="+917355123456">
+                    </div>
+                </div>
+
+                <div class="row col-12">
+                    <div class="form-group col-12">
+                        <label>Address<span class="span required">*</span></label>
+                        <input type="address" class="form-control" id="inputAddress" name="address"
+                            placeholder="address: 1234 Main St">
+                    </div>
+                </div>
+                <div class="row col-12">
+                    <div class="form-group col-6">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="button" class="btn btn-primary "> <a href="{% url 'login_page' %}"> back to login</a></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <a href="/admin" class="admin-panel-btn" target="_blank">Admin Panel</a>
+
+    <img class="img" src="/static/images/lofiboy.webp" alt="">
+    <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets4.lottiefiles.com/packages/lf20_138qcknv.json" background="transparent" speed="1"
+        style="width: 500px; height: 500px;" loop autoplay></lottie-player>
+ -->
+{% endblock %}

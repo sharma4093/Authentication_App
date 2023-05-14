@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('/static/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-origin: border-box;
+    width: 100%;
+    min-width: fit-content;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 80px;
+    /* overflow: hidden; */
+}
+
+h1 {
+    margin: 0;
+}
+
+
+
+h2 {
+    margin-top: 15px;
+    color: whitesmoke;
+    font-weight: bold;
+    text-align: center;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    margin: 20px 0 30px;
+}
+
+.p {
+    text-align: center;
+    font-weight: bolder;
+    font-size: 28px;
+}
+
+.span {
+    font-size: 12px;
+}
+
+label {
+    font-weight: bold;
+    font-size: large;
+}
+
+.required {
+    color: red;
+    font-size: larger;
+}
+
+a {
+    font-weight: bolder;
+    /* font-size: 100px; */
+    color: rgba(255, 0, 0, 0.734);
+    font-size: 18px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+
+input {
+    background-color: #282828;
+    color: white;
+    border: none;
+
+}
+
+
+.container {
+    background: rgba(249, 246, 246, 0.358);
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+    /* width: 980px;
+    height: min-content;
+    max-width: 100%;
+    min-height: 480px;
+    display: grid;
+    margin: 40px; */
+    /* justify-content: center;
+    align-items: center; */
+    margin: 40px;
+    width: 100%;
+    height: min-content;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+}
+
+.container12 {
+    background-color: rgba(245, 245, 245, 0.701);
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+    margin: 40px;
+    width: fit-content;
+    height: min-content;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+}
+.container13{
+    background-color: rgba(245, 245, 245, 0.701);
+        border-radius: 10px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+            0 10px 10px rgba(0, 0, 0, 0.22);
+        margin: 40px;
+        width: 600px;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+
+}
+
+.img {
+    width: 400px;
+    min-width: 40%;
+    height: auto;
+    margin-bottom: 50px;
+}
+
+
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .container {
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+}
+
+.divider:after,
+.divider:before {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+
+.h-custom {
+    height: calc(100% - 73px);
+}
+
+@media (max-width: 450px) {
+    .h-custom {
+        height: 100%;
+    }
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.159);
+    color: #0a0a0a;
+    /* filter: blur(10px); */
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    z-index: 999;
+}
+
+footer p {
+    font-weight: bolder;
+    color: black;
+    margin: 10px 0;
+}
+
+footer i {
+    color: red;
+}
+
+footer a {
+    color: #1e00ff;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #9f4d05;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+
+    /* adjust styles for small screens */
+    /* body {
+        height: auto;
+        margin: 0;
+    } */
+    
+    .container12 {
+        flex-direction: row;
+        height: auto;
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+.form-control {
+    background-color: rgb(144, 143, 143);
+    color: black;
+    height: 30px;
+    padding: 2;
+
+}
+
+lottie-player {
+    width: 500px;
+    height: 400px;
+}
+
+.btn {
+    color: white;
+}
+
+.btn:hover {
+    background-color: chocolate;
+    /* Green */
+    box-shadow: 0px 0px 5px 1px chocolate;
+}
+
+/* messages fading out in 3s seconds  */
+
